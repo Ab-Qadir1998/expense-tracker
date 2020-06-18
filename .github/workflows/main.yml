@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
     pull-request:
-      branches: [ master]
+      branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,13 +28,13 @@ jobs:
         version: 12
         
     - name: GitHub Action for Yarn
-      uses: Borales/actions-yarn@v2.0.0
+      uses: Borales/actions-yarn@v2.1.0
       with:
         # Yarn command
         cmd: install # npm install/ yarn install
     
     - name: Creating build
-      uses : borales/actions-yarn@v2.0.0
+      uses : borales/actions-yarn@v2.1.0
       with:
       cmd: build
     
